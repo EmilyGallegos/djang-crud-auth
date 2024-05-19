@@ -11,35 +11,35 @@
     
     <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="/">Django App</a>
+          <a class="navbar-brand" href="/">Django App EG</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav  ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="/">Home</a>
+                    <a class="nav-link" href="/">Inicio</a>
                 </li>
                 
                 {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'tasks' %}">Tasks Pending</a>
+                        <a class="nav-link" href="{% url 'tasks' %}">Tareas Pendientes</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'tasks_completed' %}">Tasks completed</a>
+                        <a class="nav-link" href="{% url 'tasks_completed' %}">Tareas completadas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/tasks/create/">Create Task</a>
+                        <a class="nav-link" href="/tasks/create/">Crear tarea</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/logout">Logout</a>
+                        <a class="nav-link" href="/logout">Cerrar sesión</a>
                     </li>
                 {% else %}    
                     <li >
-                        <a class="nav-link" href="/signup">Signup</a>
+                        <a class="nav-link" href="/signup">Registrarse</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/signin">Signin</a>
+                        <a class="nav-link" href="/signin">Iniciar sesión</a>
                     </li>
                 {% endif %}
             </ul>
